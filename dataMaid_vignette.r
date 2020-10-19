@@ -29,5 +29,11 @@ dn_sub$state <- as.factor(dn_sub$state)
 dn_sub$state_int <- as.integer(dn_sub$state)
 
 ## dataMaid
-dataMaid::makeCodebook(dn_sub)
 dataMaid::makeDataReport(dn_sub)
+dataMaid::makeCodebook(dn_sub)
+
+## and with diamonds
+
+str(diamonds)
+dataMaid::makeDataReport(diamonds)
+dataMaid::makeCodebook(diamonds)
